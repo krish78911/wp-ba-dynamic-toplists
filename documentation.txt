@@ -1,0 +1,32 @@
+SHORTCODES:
+TopList Items
+[dynamic_toplist gen_features='Handbremse, Big+wheels' category=1 product_attributes='color, gender, pack_weight' attribute_names='Farbe, Gender, Weight' orderby='price_asc' results=5 index=1 firstresultlabel="Best Seller"]
+
+TopList Table (set table=true in shortcode)
+[dynamic_toplist gen_features='Handbremse, Big+wheels' category=1 product_attributes='color, gender, pack_weight' attribute_names='Farbe, Gender, Weight' orderby='price_asc' results=5 index=1 firstresultlabel="Best Seller" table=true headline='Unsere Top 5 Kinderwagen mit Luftreifen']
+
+Compulsory Parameters:
+
+gen_features: ='Handbremse' Separate more values by comma like = 'Handbremse, Big+wheels'
+
+category: =1, =2, =3 ….
+
+results: =5 or any other number of results to be shown
+
+table=true (used only in Table view) (Set table=true to show table view with all the number of items selected in results, if table=true then index will be ignored.)
+
+Optional Parameters:
+
+firstresultlabel is used to give label on first item which is shown at top left corner ='Best Seller', if it is empty then Platz 1 will be shown.
+
+product_attributes: ='color, gender, pack_weight'
+
+attribute_names: =‘Farbe, Gender, Weight', or leave empty some of the values to not show ='Farbe,,'
+
+orderby is used to sort result. By default it is sorted by score. Some of the possible values from API documentation: ='name_asc', ='name_desc', ='rating', ='price_asc', ='price_desc', ='popularity'
+
+API Documentation to find orderby (sort) values: https://docs.spryker.com/docs/scos/dev/glue-api-guides/202204.0/searching-the-product-catalog.html#request
+
+headline='Unsere Top 5 Kinderwagen mit Luftreifen' (used only in Table view) ( is used to show headling above items table, it is hidden if there are no items.)
+
+index=1 (used only in Item view) (index value starting from 1 till the number of results or it can be completely removed or set to empty index='' in the shortcode to show all the items.)
